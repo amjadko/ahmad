@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "siteName": "Alkourabi Law Firm & Legal Consultancy",
+    "founderName": "Attorney Ahmad Alkourabi",
+    "tagline": "Your trusted legal partner since 2018"
+  },
+  "nav": {
+    "about": "About",
+    "departments": "Departments",
+    "clients": "Clients",
+    "contact": "Contact",
+    "switchLanguage": "العربية"
+  },
+  "common": {
+    "readMore": "Read more",
+    "viewProfile": "Read full profile",
+    "responsibleLawyer": "Responsible attorney",
+    "comingSoon": "Coming soon"
+  }
+}

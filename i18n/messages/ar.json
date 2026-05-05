@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "siteName": "مكتب القربي للمحاماة والاستشارات القانونية",
+    "founderName": "المحامي الأستاذ أحمد القربي",
+    "tagline": "شريك قانوني موثوق منذ 2018"
+  },
+  "nav": {
+    "about": "من نحن",
+    "departments": "أقسامنا",
+    "clients": "موكلونا",
+    "contact": "تواصل معنا",
+    "switchLanguage": "English"
+  },
+  "common": {
+    "readMore": "اقرأ المزيد",
+    "viewProfile": "السيرة الكاملة",
+    "responsibleLawyer": "المحامي المسؤول",
+    "comingSoon": "قريباً"
+  }
+}
