@@ -55,5 +55,26 @@
       "heading": "Seçkin müvekkillerimiz",
       "subhead": "Önde gelen uluslararası ve bölgesel ajans ve şirketleri temsil etmekten gurur duyuyoruz."
     }
+  },
+  "contact": {
+    "eyebrow": "İletişim",
+    "heading": "Bize konunuzu anlatın",
+    "address": "Adres",
+    "landline": "Sabit hat",
+    "mobile": "Cep",
+    "email": "E-posta",
+    "form": {
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "company": "Şirket (isteğe bağlı)",
+      "country": "Ülke (isteğe bağlı)",
+      "subject": "Konu",
+      "message": "Mesajınız",
+      "submit": "Mesaj gönder",
+      "sending": "Gönderiliyor…",
+      "success": "Mesajınız alındı. Kısa sürede dönüş yapacağız.",
+      "error": "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin veya bizimle doğrudan iletişime geçin."
+    }
   }
 }

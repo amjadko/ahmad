@@ -54,5 +54,26 @@
       "heading": "Our distinguished clients",
       "subhead": "We are proud to represent leading international and regional agencies and companies."
     }
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "heading": "Tell us about your matter",
+    "address": "Address",
+    "landline": "Landline",
+    "mobile": "Mobile",
+    "email": "Email",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company (optional)",
+      "country": "Country (optional)",
+      "subject": "Subject",
+      "message": "Your message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Your message has been received. We will be in touch soon.",
+      "error": "We could not send your message. Please try again later or contact us directly."
+    }
   }
 }

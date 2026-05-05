@@ -55,5 +55,26 @@
       "heading": "Unsere namhaften Mandanten",
       "subhead": "Wir sind stolz darauf, führende internationale und regionale Agenturen und Unternehmen zu vertreten."
     }
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "heading": "Schildern Sie uns Ihr Anliegen",
+    "address": "Adresse",
+    "landline": "Festnetz",
+    "mobile": "Mobil",
+    "email": "E-Mail",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "company": "Unternehmen (optional)",
+      "country": "Land (optional)",
+      "subject": "Betreff",
+      "message": "Ihre Nachricht",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet…",
+      "success": "Ihre Nachricht ist bei uns eingegangen. Wir melden uns in Kürze.",
+      "error": "Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt."
+    }
   }
 }
