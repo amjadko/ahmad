@@ -43,6 +43,16 @@
       "heading": "Comprehensive legal expertise in the heart of Damascus",
       "p1": "Since its establishment in 2018, Alkourabi Law Firm has positioned itself as a leading and trusted legal partner in Syria. We provide comprehensive legal and financial solutions to local and international companies, with a focus on safeguarding clients' interests and ensuring full compliance with the complex Syrian legal framework through our specialized departments.",
       "p2": "We serve a distinguished portfolio of international and regional agencies and companies from Germany, Türkiye, and Jordan — alongside our clients in the Syrian market."
+    },
+    "departments": {
+      "eyebrow": "Our services",
+      "heading": "Our specialized departments",
+      "subhead": "A unified legal and financial system that lets a single company manage all its affairs under one roof."
+    },
+    "clients": {
+      "eyebrow": "Our clients",
+      "heading": "Our distinguished clients",
+      "subhead": "We are proud to represent leading international and regional agencies and companies."
     }
   }
 }
