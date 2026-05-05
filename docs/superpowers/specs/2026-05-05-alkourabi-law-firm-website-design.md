@@ -289,9 +289,22 @@ Layout:
 ### 6.1 Language detection and switching
 
 - `next-intl` library for translations and locale routing.
-- Default locale: `ar`. Available: `ar`, `en`.
-- Language switch updates the URL prefix and persists in a cookie.
-- The `<html>` element gets `lang` and `dir` attributes that reflect the active locale.
+- **Available locales:** `en`, `de`, `tr`, `ar` (4 total).
+- **Fallback locale:** `en` (when auto-detection fails or visitor's country isn't mapped).
+- **Country → language mapping** applied on first visit:
+  - Germany, Austria, Switzerland, Liechtenstein → **`de`**
+  - Türkiye, Northern Cyprus → **`tr`**
+  - Arab League countries (Syria, Jordan, Lebanon, Iraq, Saudi Arabia, Egypt, UAE, Qatar, Kuwait, Bahrain, Oman, Yemen, Palestine, Sudan, Algeria, Tunisia, Morocco, Libya) → **`ar`**
+  - Everywhere else → **`en`**
+- **Detection mechanism (client-side, since site is static):**
+  1. Read `navigator.language` for a fast first signal.
+  2. If still ambiguous, fetch country code from a free geo-IP service (`ipapi.co/json`) — no API key, no PII stored.
+  3. Apply the mapping above and `location.replace()` to the matched locale URL.
+  4. Persist the choice in a cookie so subsequent visits skip detection.
+  5. Manual language toggle in the nav always overrides and updates the cookie.
+- Language switch updates the URL prefix.
+- The `<html>` element gets `lang` and `dir` attributes that reflect the active locale (`ar` → `rtl`; `en`, `de`, `tr` → `ltr`).
+- **Translation note:** Arabic and English are sourced from the firm's PDF. German and Turkish are produced as best-effort translations and **should be reviewed by native speakers** before public launch — this is flagged in a comment at the top of `de.json` and `tr.json`.
 
 ### 6.2 RTL handling
 
@@ -302,8 +315,9 @@ Layout:
 
 ### 6.3 Content storage
 
-- All translatable strings live in `i18n/messages/ar.json` and `i18n/messages/en.json`.
-- Structured data (departments, lawyers, clients) lives in TypeScript files under `data/` with each field as `{ ar: string; en: string }`.
+- All translatable UI strings live in `i18n/messages/{en,de,tr,ar}.json`.
+- Structured data (departments, lawyers, clients) lives in TypeScript files under `data/` with each translatable field as `{ ar: string; en: string; de: string; tr: string }` (the `Localized` type).
+- Lawyer's spoken `languages` field is a separate concept — a list of which languages a particular attorney speaks personally, used for display only.
 
 ---
 
