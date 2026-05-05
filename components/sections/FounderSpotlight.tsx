@@ -5,6 +5,7 @@ import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
 import { Divider } from '@/components/ui/Divider';
 import { ArrowRightIcon } from '@/components/icons/ContactIcons';
+import { Reveal } from '@/components/ui/Reveal';
 import type { Locale } from '@/i18n/routing';
 import { getFounder } from '@/data/lawyers';
 
@@ -16,7 +17,8 @@ export function FounderSpotlight() {
 
   return (
     <section className="bg-ink-elevated py-24 md:py-32 border-y border-ink-line">
-      <Container className="grid gap-12 md:grid-cols-2 md:items-center">
+      <Reveal>
+        <Container className="grid gap-12 md:grid-cols-2 md:items-center">
         {/* Photo / monogram column */}
         <div className="relative">
           <div className="aspect-[4/5] w-full max-w-sm mx-auto md:max-w-none border border-gold/40 rounded-sm bg-ink-deep flex items-center justify-center relative overflow-hidden">
@@ -55,7 +57,8 @@ export function FounderSpotlight() {
             </Button>
           </div>
         </div>
-      </Container>
+        </Container>
+      </Reveal>
     </section>
   );
 }

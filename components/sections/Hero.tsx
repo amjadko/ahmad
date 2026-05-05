@@ -5,6 +5,7 @@ import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
 import { Divider } from '@/components/ui/Divider';
+import { Reveal } from '@/components/ui/Reveal';
 import type { Locale } from '@/i18n/routing';
 import { firm } from '@/data/firm';
 
@@ -27,54 +28,56 @@ export function Hero() {
       />
 
       <Container className="relative grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-center">
-        {/* Text column */}
-        <div>
-          <Eyebrow className="mb-6">{firm.name[locale]}</Eyebrow>
-          <Heading
-            level={1}
-            size="5xl"
-            asArabic={locale === 'ar'}
-            className="text-cream"
-          >
-            {tMeta('tagline')}
-          </Heading>
-          <Divider className="my-8" />
-          <p className="max-w-xl text-base text-cream-muted leading-relaxed">
-            {tHero('subhead')}
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Button as="link" href="#departments" variant="primary" size="lg">
-              {tHero('ctaServices')}
-            </Button>
-            <Button as="link" href="#contact" variant="outline" size="lg">
-              {tHero('ctaContact')}
-            </Button>
+        <Reveal delay={0}>
+          <div>
+            <Eyebrow className="mb-6">{firm.name[locale]}</Eyebrow>
+            <Heading
+              level={1}
+              size="5xl"
+              asArabic={locale === 'ar'}
+              className="text-cream"
+            >
+              {tMeta('tagline')}
+            </Heading>
+            <Divider className="my-8" />
+            <p className="max-w-xl text-base text-cream-muted leading-relaxed">
+              {tHero('subhead')}
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Button as="link" href="#departments" variant="primary" size="lg">
+                {tHero('ctaServices')}
+              </Button>
+              <Button as="link" href="#contact" variant="outline" size="lg">
+                {tHero('ctaContact')}
+              </Button>
+            </div>
           </div>
-        </div>
+        </Reveal>
 
-        {/* Image column */}
-        <div className="relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none">
-          <div className="absolute inset-0 rounded-sm overflow-hidden border border-gold/40">
-            <Image
-              src="/images/lady-justice.jpg"
-              alt={tHero('imageAlt')}
-              fill
-              priority
-              sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
-              className="object-cover"
-              style={{ filter: 'sepia(0.15) saturate(0.85) brightness(0.95)' }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  'radial-gradient(ellipse at top right, rgba(201,169,97,0.35), transparent 60%), linear-gradient(to bottom, transparent 50%, rgba(10,22,40,0.55))'
-              }}
-            />
+        <Reveal delay={0.15}>
+          <div className="relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none">
+            <div className="absolute inset-0 rounded-sm overflow-hidden border border-gold/40">
+              <Image
+                src="/images/lady-justice.jpg"
+                alt={tHero('imageAlt')}
+                fill
+                priority
+                sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+                style={{ filter: 'sepia(0.15) saturate(0.85) brightness(0.95)' }}
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    'radial-gradient(ellipse at top right, rgba(201,169,97,0.35), transparent 60%), linear-gradient(to bottom, transparent 50%, rgba(10,22,40,0.55))'
+                }}
+              />
+            </div>
+            <span className="absolute -top-2 -start-2 h-6 w-6 border-t border-s border-gold" aria-hidden="true" />
+            <span className="absolute -bottom-2 -end-2 h-6 w-6 border-b border-e border-gold" aria-hidden="true" />
           </div>
-          <span className="absolute -top-2 -start-2 h-6 w-6 border-t border-s border-gold" aria-hidden="true" />
-          <span className="absolute -bottom-2 -end-2 h-6 w-6 border-b border-e border-gold" aria-hidden="true" />
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

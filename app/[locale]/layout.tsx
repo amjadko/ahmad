@@ -87,6 +87,12 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={dir} className={fontVariables} suppressHydrationWarning>
       <body className="bg-ink-deep text-cream antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-[100] focus:bg-gold focus:text-ink-deep focus:px-4 focus:py-2 focus:rounded-sm focus:font-semibold"
+        >
+          Skip to content
+        </a>
         <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
         </NextIntlClientProvider>
