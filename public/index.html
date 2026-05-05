@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Alkourabi Law Firm</title>
+<link rel="canonical" href="https://kourabi.com/en/" />
+<link rel="alternate" hreflang="en" href="https://kourabi.com/en/" />
+<link rel="alternate" hreflang="de" href="https://kourabi.com/de/" />
+<link rel="alternate" hreflang="tr" href="https://kourabi.com/tr/" />
+<link rel="alternate" hreflang="ar" href="https://kourabi.com/ar/" />
+<link rel="alternate" hreflang="x-default" href="https://kourabi.com/en/" />
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #0A1628;
+    color: #F5F0E1;
+    font-family: ui-serif, Georgia, "Cormorant Garamond", "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+  }
+  .frame {
+    border: 1px solid #C9A961;
+    padding: 22px 30px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #C9A961;
+    font-weight: 600;
+  }
+  .wordmark {
+    font-size: 32px;
+    margin-top: 28px;
+    letter-spacing: 0.04em;
+  }
+  .hint {
+    margin-top: 28px;
+    color: #C9C2AE;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+  .pulse {
+    display: inline-block;
+    width: 6px; height: 6px;
+    margin: 0 4px;
+    background: #C9A961;
+    border-radius: 50%;
+    animation: pulse 1.2s infinite ease-in-out;
+  }
+  .pulse:nth-child(2) { animation-delay: 0.15s; }
+  .pulse:nth-child(3) { animation-delay: 0.30s; }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.25; transform: scale(0.85); }
+    50%      { opacity: 1;    transform: scale(1.0); }
+  }
+  noscript a {
+    color: #C9A961;
+    margin: 0 8px;
+  }
+</style>
+</head>
+<body>
+<div class="frame">Alkourabi Law Firm</div>
+<div class="wordmark">Welcome &middot; مرحباً &middot; Willkommen &middot; Hoş geldiniz</div>
+<div class="hint">
+  <span class="pulse"></span><span class="pulse"></span><span class="pulse"></span>
+</div>
+<noscript>
+  <p style="margin-top:32px;color:#C9C2AE;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px">
+    Choose your language:
+    <a href="/en/">English</a>
+    <a href="/de/">Deutsch</a>
+    <a href="/tr/">Türkçe</a>
+    <a href="/ar/">العربية</a>
+  </p>
+</noscript>
+<script>
+(function () {
+  var ARAB_CODES = ['SY','JO','LB','IQ','SA','EG','AE','QA','KW','BH','OM','YE','PS','SD','DZ','TN','MA','LY'];
+  var DE_CODES   = ['DE','AT','CH','LI'];
+  var TR_CODES   = ['TR'];
+  var FALLBACK   = 'en';
+  var TIMEOUT_MS = 2000;
+  var COOKIE     = 'preferred_locale';
+
+  function readCookie(name) {
+    var match = document.cookie.match('(?:^|; )' + name + '=([^;]+)');
+    return match ? decodeURIComponent(match[1]) : null;
+  }
+  function setCookie(name, value) {
+    var d = new Date(); d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
+    document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+  }
+  function go(locale) {
+    if (['en','de','tr','ar'].indexOf(locale) === -1) locale = FALLBACK;
+    setCookie(COOKIE, locale);
+    location.replace('/' + locale + '/');
+  }
+  function fromBrowser() {
+    var lang = (navigator.language || '').toLowerCase();
+    if (lang.indexOf('tr') === 0) return 'tr';
+    if (lang.indexOf('de') === 0) return 'de';
+    if (lang.indexOf('ar') === 0) return 'ar';
+    return null;
+  }
+  function fromCountryCode(cc) {
+    if (!cc) return null;
+    cc = cc.toUpperCase();
+    if (DE_CODES.indexOf(cc) !== -1) return 'de';
+    if (TR_CODES.indexOf(cc) !== -1) return 'tr';
+    if (ARAB_CODES.indexOf(cc) !== -1) return 'ar';
+    return null;
+  }
+
+  // Step 1: cookie wins
+  var stored = readCookie(COOKIE);
+  if (stored && ['en','de','tr','ar'].indexOf(stored) !== -1) {
+    go(stored);
+    return;
+  }
+
+  // Step 2: browser language
+  var byBrowser = fromBrowser();
+  if (byBrowser) {
+    go(byBrowser);
+    return;
+  }
+
+  // Step 3: geo-IP with timeout
+  var done = false;
+  var timer = setTimeout(function () {
+    if (done) return;
+    done = true;
+    go(FALLBACK);
+  }, TIMEOUT_MS);
+
+  try {
+    fetch('https://ipapi.co/json/', { credentials: 'omit' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (done) return;
+        done = true;
+        clearTimeout(timer);
+        var byCountry = data && data.country_code ? fromCountryCode(data.country_code) : null;
+        go(byCountry || FALLBACK);
+      })
+      .catch(function () {
+        if (done) return;
+        done = true;
+        clearTimeout(timer);
+        go(FALLBACK);
+      });
+  } catch (e) {
+    if (done) return;
+    done = true;
+    clearTimeout(timer);
+    go(FALLBACK);
+  }
+})();
+</script>
+</body>
+</html>
