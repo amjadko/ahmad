@@ -76,5 +76,28 @@
       "success": "Mesajınız alındı. Kısa sürede dönüş yapacağız.",
       "error": "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin veya bizimle doğrudan iletişime geçin."
     }
+  },
+  "lawyer": {
+    "tableOfContents": "Bu sayfada",
+    "sections": {
+      "about": "Hakkında",
+      "departments": "Yönettiği bölümler",
+      "matters": "Öne çıkan dosyalar",
+      "education": "Eğitim",
+      "languages": "Diller"
+    },
+    "headings": {
+      "background": "Mesleki geçmiş",
+      "leads": "Yönetir",
+      "leadsSingular": "bölüm",
+      "leadsPlural": "bölüm",
+      "selectedWork": "Seçilmiş temsil örnekleri",
+      "academic": "Akademik nitelikler",
+      "working": "Çalışma dilleri"
+    },
+    "actions": {
+      "email": "E-posta",
+      "call": "Ara"
+    }
   }
 }

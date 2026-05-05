@@ -75,5 +75,28 @@
       "success": "Your message has been received. We will be in touch soon.",
       "error": "We could not send your message. Please try again later or contact us directly."
     }
+  },
+  "lawyer": {
+    "tableOfContents": "On this page",
+    "sections": {
+      "about": "About",
+      "departments": "Departments led",
+      "matters": "Notable matters",
+      "education": "Education",
+      "languages": "Languages"
+    },
+    "headings": {
+      "background": "Professional background",
+      "leads": "Leads",
+      "leadsSingular": "department",
+      "leadsPlural": "departments",
+      "selectedWork": "Selected representative work",
+      "academic": "Academic credentials",
+      "working": "Working languages"
+    },
+    "actions": {
+      "email": "Email",
+      "call": "Call"
+    }
   }
 }

@@ -76,5 +76,28 @@
       "success": "Ihre Nachricht ist bei uns eingegangen. Wir melden uns in Kürze.",
       "error": "Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt."
     }
+  },
+  "lawyer": {
+    "tableOfContents": "Auf dieser Seite",
+    "sections": {
+      "about": "Über",
+      "departments": "Geleitete Bereiche",
+      "matters": "Wichtige Mandate",
+      "education": "Ausbildung",
+      "languages": "Sprachen"
+    },
+    "headings": {
+      "background": "Beruflicher Werdegang",
+      "leads": "Leitet",
+      "leadsSingular": "Bereich",
+      "leadsPlural": "Bereiche",
+      "selectedWork": "Ausgewählte Arbeitsbeispiele",
+      "academic": "Akademische Qualifikationen",
+      "working": "Arbeitssprachen"
+    },
+    "actions": {
+      "email": "E-Mail",
+      "call": "Anrufen"
+    }
   }
 }

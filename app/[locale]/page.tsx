@@ -1,4 +1,13 @@
 import { unstable_setRequestLocale } from 'next-intl/server';
+import { TopNav } from '@/components/layout/TopNav';
+import { Footer } from '@/components/layout/Footer';
+import { Hero } from '@/components/sections/Hero';
+import { IdentityStrip } from '@/components/sections/IdentityStrip';
+import { About } from '@/components/sections/About';
+import { FounderSpotlight } from '@/components/sections/FounderSpotlight';
+import { Departments } from '@/components/sections/Departments';
+import { Clients } from '@/components/sections/Clients';
+import { Contact } from '@/components/sections/Contact';
 
 export default async function HomePage({
   params
@@ -7,10 +16,20 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   unstable_setRequestLocale(locale);
+
   return (
-    <main className="container-page py-32">
-      <h1 className="font-display text-5xl text-gold">Alkourabi Law Firm</h1>
-      <p className="mt-6 text-cream-muted">Stub homepage — sections coming soon.</p>
-    </main>
+    <>
+      <TopNav />
+      <main id="main">
+        <Hero />
+        <IdentityStrip />
+        <About />
+        <FounderSpotlight />
+        <Departments />
+        <Clients />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }

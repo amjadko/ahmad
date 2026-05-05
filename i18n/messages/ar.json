@@ -75,5 +75,28 @@
       "success": "تم استلام رسالتك. سنعود إليك قريباً.",
       "error": "تعذّر إرسال الرسالة. يرجى المحاولة لاحقاً أو الاتصال بنا مباشرة."
     }
+  },
+  "lawyer": {
+    "tableOfContents": "الفهرس",
+    "sections": {
+      "about": "نبذة",
+      "departments": "الأقسام",
+      "matters": "أبرز الأعمال",
+      "education": "الشهادات",
+      "languages": "اللغات"
+    },
+    "headings": {
+      "background": "الخلفية المهنية",
+      "leads": "يقود",
+      "leadsSingular": "قسم",
+      "leadsPlural": "أقسام",
+      "selectedWork": "تجارب مختارة",
+      "academic": "التحصيل العلمي",
+      "working": "لغات التواصل"
+    },
+    "actions": {
+      "email": "راسلني",
+      "call": "اتصل بي"
+    }
   }
 }
