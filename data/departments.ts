@@ -77,7 +77,7 @@ export const departments: Department[] = [
   {
     slug: 'tax-financial',
     iconKey: 'tax',
-    leadLawyerSlug: 'ahmad-alkourabi',
+    leadLawyerSlug: 'alia',
     name: {
       en: 'Tax & Financial Advisory',
       de: 'Steuer- und Finanzberatung',
@@ -123,7 +123,7 @@ export const departments: Department[] = [
   {
     slug: 'certified-translation',
     iconKey: 'translation',
-    leadLawyerSlug: 'ahmad-alkourabi',
+    leadLawyerSlug: 'hassan-aqeel',
     name: {
       en: 'Certified Legal Translation',
       de: 'Beglaubigte Rechtsübersetzung',
