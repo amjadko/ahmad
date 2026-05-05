@@ -16,5 +16,13 @@
     "viewProfile": "السيرة الكاملة",
     "responsibleLawyer": "المحامي المسؤول",
     "comingSoon": "قريباً"
+  },
+  "footer": {
+    "sitemap": "خريطة الموقع",
+    "officeHours": "ساعات العمل",
+    "closed": "الجمعة والسبت — مغلق",
+    "rights": "جميع الحقوق محفوظة.",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الاستخدام"
   }
 }

@@ -17,5 +17,13 @@
     "viewProfile": "Vollständiges Profil",
     "responsibleLawyer": "Zuständiger Anwalt",
     "comingSoon": "Demnächst verfügbar"
+  },
+  "footer": {
+    "sitemap": "Sitemap",
+    "officeHours": "Öffnungszeiten",
+    "closed": "Freitag & Samstag — geschlossen",
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen"
   }
 }

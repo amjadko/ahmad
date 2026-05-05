@@ -16,5 +16,13 @@
     "viewProfile": "Read full profile",
     "responsibleLawyer": "Responsible attorney",
     "comingSoon": "Coming soon"
+  },
+  "footer": {
+    "sitemap": "Sitemap",
+    "officeHours": "Office hours",
+    "closed": "Friday & Saturday — closed",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
   }
 }

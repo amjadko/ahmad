@@ -17,5 +17,13 @@
     "viewProfile": "Profili görüntüle",
     "responsibleLawyer": "Sorumlu avukat",
     "comingSoon": "Yakında"
+  },
+  "footer": {
+    "sitemap": "Site haritası",
+    "officeHours": "Çalışma saatleri",
+    "closed": "Cuma & Cumartesi — kapalı",
+    "rights": "Tüm hakları saklıdır.",
+    "privacy": "Gizlilik",
+    "terms": "Kullanım koşulları"
   }
 }
