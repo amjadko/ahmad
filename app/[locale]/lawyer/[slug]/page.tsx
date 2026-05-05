@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import { personJsonLd } from '@/lib/seo';
 import type { Metadata } from 'next';
 import { TopNav } from '@/components/layout/TopNav';
 import { Footer } from '@/components/layout/Footer';
@@ -47,6 +48,15 @@ export default async function LawyerPage({
         <LawyerBody lawyer={lawyer} locale={locale as Locale} />
       </main>
       <Footer />
+      {(() => {
+        const ld = personJsonLd(slug, locale as Locale);
+        return ld ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+          />
+        ) : null;
+      })()}
     </>
   );
 }

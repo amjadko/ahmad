@@ -99,5 +99,19 @@
       "email": "E-posta",
       "call": "Ara"
     }
+  },
+  "legal": {
+    "privacy": {
+      "eyebrow": "Gizlilik politikası",
+      "heading": "Bilgilerinizi nasıl koruyoruz",
+      "p1": "Alkourabi Hukuk Bürosu, ziyaretçilerinin ve müvekkillerinin gizliliğini korumayı taahhüt eder. Bu sayfa yalnızca iletişim formu aracılığıyla gönüllü olarak gönderdiğiniz iletişim bilgilerini toplar; bu bilgiler yalnızca sorgunuza yanıt vermek için kullanılır.",
+      "p2": "Bilgilerinizi üçüncü taraflarla paylaşmıyor ve harici bir veritabanında saklamıyoruz. Sorularınız için lütfen İletişim sayfasındaki e-posta adresiyle bize ulaşın."
+    },
+    "terms": {
+      "eyebrow": "Kullanım koşulları",
+      "heading": "Bu web sitesinin kullanımı",
+      "p1": "Bu web sitesindeki bilgiler yalnızca bilgilendirme amaçlıdır ve hukuki tavsiye niteliği taşımaz. Resmi bir vekaletname imzalanana kadar ziyaretçi ile büro arasında avukat-müvekkil ilişkisi oluşmaz.",
+      "p2": "Büro, bu sitenin tüm içeriği üzerindeki fikri mülkiyet haklarını saklı tutar. İçeriğin önceden yazılı izin alınmadan yeniden yayımlanması veya kopyalanması yasaktır."
+    }
   }
 }

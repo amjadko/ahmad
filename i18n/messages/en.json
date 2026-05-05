@@ -98,5 +98,19 @@
       "email": "Email",
       "call": "Call"
     }
+  },
+  "legal": {
+    "privacy": {
+      "eyebrow": "Privacy policy",
+      "heading": "How we protect your information",
+      "p1": "Alkourabi Law Firm is committed to protecting the privacy of its visitors and clients. This page collects only the contact information you voluntarily submit via the contact form, used exclusively to reply to your inquiry.",
+      "p2": "We do not share your information with any third party and do not store it in any external database. For questions, please contact us via the email listed on the Contact page."
+    },
+    "terms": {
+      "eyebrow": "Terms of use",
+      "heading": "Use of this website",
+      "p1": "The information on this website is provided for informational purposes only and does not constitute legal advice. No attorney-client relationship is formed between a visitor and the firm until a formal engagement letter is signed.",
+      "p2": "The firm reserves all intellectual property rights to the content of this site. Republishing or copying the content without prior written consent is not permitted."
+    }
   }
 }

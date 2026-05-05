@@ -99,5 +99,19 @@
       "email": "E-Mail",
       "call": "Anrufen"
     }
+  },
+  "legal": {
+    "privacy": {
+      "eyebrow": "Datenschutzerklärung",
+      "heading": "So schützen wir Ihre Daten",
+      "p1": "Die Alkourabi Anwaltskanzlei verpflichtet sich zum Schutz der Privatsphäre ihrer Besucher und Mandanten. Auf dieser Seite werden nur Kontaktdaten erfasst, die Sie freiwillig über das Kontaktformular übermitteln, und ausschließlich zur Beantwortung Ihrer Anfrage verwendet.",
+      "p2": "Wir geben Ihre Daten nicht an Dritte weiter und speichern sie nicht in externen Datenbanken. Für Fragen wenden Sie sich bitte an die auf der Kontaktseite angegebene E-Mail-Adresse."
+    },
+    "terms": {
+      "eyebrow": "Nutzungsbedingungen",
+      "heading": "Nutzung dieser Website",
+      "p1": "Die Informationen auf dieser Website dienen ausschließlich Informationszwecken und stellen keine Rechtsberatung dar. Ein Mandatsverhältnis zwischen Besucher und Kanzlei entsteht erst nach Unterzeichnung einer formellen Vollmacht.",
+      "p2": "Die Kanzlei behält sich alle geistigen Eigentumsrechte am Inhalt dieser Website vor. Eine Wiederveröffentlichung oder Vervielfältigung ohne vorherige schriftliche Zustimmung ist nicht gestattet."
+    }
   }
 }

@@ -1,4 +1,6 @@
 import { unstable_setRequestLocale } from 'next-intl/server';
+import { legalServiceJsonLd } from '@/lib/seo';
+import type { Locale } from '@/i18n/routing';
 import { TopNav } from '@/components/layout/TopNav';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
@@ -30,6 +32,10 @@ export default async function HomePage({
         <Contact />
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceJsonLd(locale as Locale)) }}
+      />
     </>
   );
 }
