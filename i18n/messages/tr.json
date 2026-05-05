@@ -89,6 +89,7 @@
     "sections": {
       "about": "Hakkında",
       "departments": "Yönettiği bölümler",
+      "clients": "Müvekkiller",
       "matters": "Öne çıkan dosyalar",
       "education": "Eğitim",
       "languages": "Diller"
@@ -98,6 +99,7 @@
       "leads": "Yönetir",
       "leadsSingular": "bölüm",
       "leadsPlural": "bölüm",
+      "representsCompanies": "Bu şirketleri temsil eder",
       "selectedWork": "Seçilmiş temsil örnekleri",
       "academic": "Akademik nitelikler",
       "working": "Çalışma dilleri"

@@ -7,6 +7,7 @@ import { Link } from '@/i18n/routing';
 import type { Locale } from '@/i18n/routing';
 import type { Lawyer } from '@/data/types';
 import { departments } from '@/data/departments';
+import { LawyerClients } from './LawyerClients';
 
 const languageNames: Record<Locale, Record<string, string>> = {
   ar: { ar: 'العربية', en: 'الإنكليزية', tr: 'التركية', fr: 'الفرنسية', de: 'الألمانية' },
@@ -24,10 +25,12 @@ export function LawyerBody({ lawyer, locale }: { lawyer: Lawyer; locale: Locale 
 
   const hasMatters = lawyer.notableMatters.length > 0;
   const hasEducation = lawyer.education.length > 0;
+  const hasClients = (lawyer.clients?.length ?? 0) > 0;
 
   const sections = [
     { id: 'about', label: t('sections.about') },
     { id: 'departments', label: t('sections.departments') },
+    ...(hasClients ? [{ id: 'clients', label: t('sections.clients') }] : []),
     ...(hasMatters ? [{ id: 'matters', label: t('sections.matters') }] : []),
     ...(hasEducation ? [{ id: 'education', label: t('sections.education') }] : []),
     { id: 'languages', label: t('sections.languages') }
@@ -79,6 +82,10 @@ export function LawyerBody({ lawyer, locale }: { lawyer: Lawyer; locale: Locale 
               ))}
             </ul>
           </div>
+
+          {hasClients && lawyer.clients && (
+            <LawyerClients clients={lawyer.clients} locale={locale} />
+          )}
 
           {hasMatters && (
           <div id="matters">

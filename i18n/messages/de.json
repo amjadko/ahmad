@@ -89,6 +89,7 @@
     "sections": {
       "about": "Über",
       "departments": "Geleitete Bereiche",
+      "clients": "Mandanten",
       "matters": "Wichtige Mandate",
       "education": "Ausbildung",
       "languages": "Sprachen"
@@ -98,6 +99,7 @@
       "leads": "Leitet",
       "leadsSingular": "Bereich",
       "leadsPlural": "Bereiche",
+      "representsCompanies": "Vertritt diese Unternehmen",
       "selectedWork": "Ausgewählte Arbeitsbeispiele",
       "academic": "Akademische Qualifikationen",
       "working": "Arbeitssprachen"

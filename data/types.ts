@@ -40,6 +40,8 @@ export type Lawyer = {
   languages: ('ar' | 'en' | 'tr' | 'fr' | 'de')[];
   education: Localized[];
   notableMatters: Localized[];
+  /** Companies this lawyer represents, grouped by country. */
+  clients?: ClientCountry[];
   email?: string;
   phone?: string;
   isFounder?: boolean;

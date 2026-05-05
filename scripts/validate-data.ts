@@ -2,7 +2,6 @@ import { z } from 'zod';
 import { firm } from '../data/firm';
 import { departments } from '../data/departments';
 import { lawyers } from '../data/lawyers';
-import { clientCountries } from '../data/clients';
 
 const Localized = z.object({
   en: z.string().min(1),
@@ -34,6 +33,17 @@ const Department = z.object({
   leadLawyerSlug: z.string().min(1)
 });
 
+const ClientCompany = z.object({
+  name: z.string().min(1),
+  arabicName: z.string().optional()
+});
+
+const ClientCountry = z.object({
+  code: z.enum(['DE', 'TR', 'JO', 'SY']),
+  name: Localized,
+  companies: z.array(ClientCompany).min(1)
+});
+
 const Lawyer = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/),
   name: Localized,
@@ -47,20 +57,10 @@ const Lawyer = z.object({
   languages: z.array(z.enum(['ar', 'en', 'tr', 'fr', 'de'])),
   education: z.array(Localized),
   notableMatters: z.array(Localized),
+  clients: z.array(ClientCountry).optional(),
   email: z.string().email().optional(),
   phone: z.string().regex(/^\+?\d+$/).optional(),
   isFounder: z.boolean().optional()
-});
-
-const ClientCompany = z.object({
-  name: z.string().min(1),
-  arabicName: z.string().optional()
-});
-
-const ClientCountry = z.object({
-  code: z.enum(['DE', 'TR', 'JO', 'SY']),
-  name: Localized,
-  companies: z.array(ClientCompany).min(1)
 });
 
 let errorCount = 0;
@@ -78,7 +78,6 @@ function check(label: string, fn: () => void) {
 check('firm.ts', () => Firm.parse(firm));
 check('departments.ts', () => z.array(Department).parse(departments));
 check('lawyers.ts', () => z.array(Lawyer).parse(lawyers));
-check('clients.ts', () => z.array(ClientCountry).parse(clientCountries));
 
 check('departments → leadLawyerSlug references a real lawyer', () => {
   for (const d of departments) {

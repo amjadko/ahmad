@@ -88,6 +88,7 @@
     "sections": {
       "about": "About",
       "departments": "Departments led",
+      "clients": "Clients",
       "matters": "Notable matters",
       "education": "Education",
       "languages": "Languages"
@@ -97,6 +98,7 @@
       "leads": "Leads",
       "leadsSingular": "department",
       "leadsPlural": "departments",
+      "representsCompanies": "Represents these companies",
       "selectedWork": "Selected representative work",
       "academic": "Academic credentials",
       "working": "Working languages"

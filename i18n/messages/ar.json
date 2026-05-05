@@ -88,6 +88,7 @@
     "sections": {
       "about": "نبذة",
       "departments": "الأقسام",
+      "clients": "الموكلون",
       "matters": "أبرز الأعمال",
       "education": "الشهادات",
       "languages": "اللغات"
@@ -97,6 +98,7 @@
       "leads": "يقود",
       "leadsSingular": "قسم",
       "leadsPlural": "أقسام",
+      "representsCompanies": "يمثل هذه الشركات",
       "selectedWork": "تجارب مختارة",
       "academic": "التحصيل العلمي",
       "working": "لغات التواصل"

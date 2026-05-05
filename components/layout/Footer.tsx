@@ -30,7 +30,6 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-cream-muted">
               <li><a href={`/${locale}/#about`} className="hover:text-gold transition">{tNav('about')}</a></li>
               <li><a href={`/${locale}/#departments`} className="hover:text-gold transition">{tNav('departments')}</a></li>
-              <li><a href={`/${locale}/#clients`} className="hover:text-gold transition">{tNav('clients')}</a></li>
               <li><a href={`/${locale}/#contact`} className="hover:text-gold transition">{tNav('contact')}</a></li>
             </ul>
           </nav>
