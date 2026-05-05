@@ -1,0 +1,21 @@
+{
+  "_note": "REVIEW PENDING — German translations produced as best-effort by AI. Have a native speaker review before public launch.",
+  "meta": {
+    "siteName": "Alkourabi Anwaltskanzlei & Rechtsberatung",
+    "founderName": "Rechtsanwalt Ahmad Alkourabi",
+    "tagline": "Ihr vertrauenswürdiger Rechtspartner seit 2018"
+  },
+  "nav": {
+    "about": "Über uns",
+    "departments": "Bereiche",
+    "clients": "Mandanten",
+    "contact": "Kontakt",
+    "switchLanguage": "Language"
+  },
+  "common": {
+    "readMore": "Mehr erfahren",
+    "viewProfile": "Vollständiges Profil",
+    "responsibleLawyer": "Zuständiger Anwalt",
+    "comingSoon": "Demnächst verfügbar"
+  }
+}

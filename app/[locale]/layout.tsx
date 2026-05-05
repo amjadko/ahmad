@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { routing, type Locale } from '@/i18n/routing';
+import { routing, type Locale, isRtl } from '@/i18n/routing';
 import { fontVariables } from '@/lib/fonts';
 import '../globals.css';
 
@@ -10,37 +10,62 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+const SITE_NAME: Record<Locale, string> = {
+  ar: 'مكتب القربي للمحاماة والاستشارات القانونية',
+  en: 'Alkourabi Law Firm & Legal Consultancy',
+  de: 'Alkourabi Anwaltskanzlei & Rechtsberatung',
+  tr: 'Alkourabi Hukuk Bürosu ve Hukuki Danışmanlık'
+};
+
+const SITE_DESCRIPTION: Record<Locale, string> = {
+  ar: 'حلول قانونية ومالية متكاملة للشركات في سوريا منذ 2018.',
+  en: 'Comprehensive legal and financial solutions for companies in Syria since 2018.',
+  de: 'Umfassende rechtliche und finanzielle Lösungen für Unternehmen in Syrien seit 2018.',
+  tr: 'Suriye\'de faaliyet gösteren şirketlere kapsamlı hukuki ve mali çözümler — 2018\'den beri.'
+};
+
+const TITLE_TEMPLATE: Record<Locale, string> = {
+  ar: '%s | مكتب القربي',
+  en: '%s | Alkourabi',
+  de: '%s | Alkourabi',
+  tr: '%s | Alkourabi'
+};
+
+const OG_LOCALE: Record<Locale, string> = {
+  ar: 'ar_SY',
+  en: 'en_US',
+  de: 'de_DE',
+  tr: 'tr_TR'
+};
+
 export async function generateMetadata({
   params
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isAr = locale === 'ar';
+  const loc = (routing.locales.includes(locale as Locale) ? locale : routing.defaultLocale) as Locale;
+
   return {
     metadataBase: new URL('https://kourabi.com'),
     title: {
-      default: isAr
-        ? 'مكتب القربي للمحاماة والاستشارات القانونية'
-        : 'Alkourabi Law Firm & Legal Consultancy',
-      template: isAr ? '%s | مكتب القربي' : '%s | Alkourabi'
+      default: SITE_NAME[loc],
+      template: TITLE_TEMPLATE[loc]
     },
-    description: isAr
-      ? 'حلول قانونية ومالية متكاملة للشركات في سوريا منذ 2018.'
-      : 'Comprehensive legal and financial solutions for companies in Syria since 2018.',
+    description: SITE_DESCRIPTION[loc],
     alternates: {
-      canonical: `/${locale}`,
+      canonical: `/${loc}`,
       languages: {
         ar: '/ar',
-        en: '/en'
+        en: '/en',
+        de: '/de',
+        tr: '/tr'
       }
     },
     openGraph: {
       type: 'website',
-      locale: isAr ? 'ar_SY' : 'en_US',
-      siteName: isAr
-        ? 'مكتب القربي للمحاماة والاستشارات القانونية'
-        : 'Alkourabi Law Firm & Legal Consultancy'
+      locale: OG_LOCALE[loc],
+      siteName: SITE_NAME[loc]
     }
   };
 }
@@ -57,7 +82,7 @@ export default async function LocaleLayout({
   unstable_setRequestLocale(locale as Locale);
 
   const messages = await getMessages();
-  const dir = locale === 'ar' ? 'rtl' : 'ltr';
+  const dir = isRtl(locale) ? 'rtl' : 'ltr';
 
   return (
     <html lang={locale} dir={dir} className={fontVariables} suppressHydrationWarning>

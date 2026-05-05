@@ -1,0 +1,21 @@
+{
+  "_note": "REVIEW PENDING — Turkish translations produced as best-effort by AI. Have a native speaker review before public launch.",
+  "meta": {
+    "siteName": "Alkourabi Hukuk Bürosu ve Hukuki Danışmanlık",
+    "founderName": "Avukat Ahmad Alkourabi",
+    "tagline": "2018'den bu yana güvenilir hukuki ortağınız"
+  },
+  "nav": {
+    "about": "Hakkımızda",
+    "departments": "Bölümler",
+    "clients": "Müvekkiller",
+    "contact": "İletişim",
+    "switchLanguage": "Language"
+  },
+  "common": {
+    "readMore": "Daha fazla",
+    "viewProfile": "Profili görüntüle",
+    "responsibleLawyer": "Sorumlu avukat",
+    "comingSoon": "Yakında"
+  }
+}
