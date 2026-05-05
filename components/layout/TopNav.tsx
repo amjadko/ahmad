@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import clsx from 'clsx';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
@@ -10,6 +10,7 @@ import { LanguagePicker } from './LanguagePicker';
 
 export function TopNav() {
   const t = useTranslations('nav');
+  const locale = useLocale();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -21,10 +22,10 @@ export function TopNav() {
   }, []);
 
   const links = [
-    { href: '#about', label: t('about') },
-    { href: '#departments', label: t('departments') },
-    { href: '#clients', label: t('clients') },
-    { href: '#contact', label: t('contact') }
+    { href: `/${locale}/#about`, label: t('about') },
+    { href: `/${locale}/#departments`, label: t('departments') },
+    { href: `/${locale}/#clients`, label: t('clients') },
+    { href: `/${locale}/#contact`, label: t('contact') }
   ];
 
   return (
@@ -38,7 +39,7 @@ export function TopNav() {
     >
       <Container className="flex h-20 items-center justify-between gap-6">
         {/* Brand */}
-        <a href="#top" className="flex items-center gap-3" aria-label="Alkourabi Law Firm">
+        <a href={`/${locale}/`} className="flex items-center gap-3" aria-label="Alkourabi Law Firm">
           <span className="rounded-sm border border-gold p-1.5">
             <BrandMark size={32} />
           </span>
@@ -60,7 +61,7 @@ export function TopNav() {
         {/* Right cluster */}
         <div className="flex items-center gap-5">
           <LanguagePicker className="hidden md:block" />
-          <Button as="link" href="#contact" variant="outline" size="md" className="hidden md:inline-flex">
+          <Button as="link" href="/#contact" variant="outline" size="md" className="hidden md:inline-flex">
             {t('contact')}
           </Button>
 
@@ -98,7 +99,7 @@ export function TopNav() {
             ))}
             <div className="flex items-center justify-between pt-4 border-t border-ink-line">
               <LanguagePicker />
-              <Button as="link" href="#contact" variant="primary" size="md" onClick={() => setMobileOpen(false)}>
+              <Button as="link" href="/#contact" variant="primary" size="md" onClick={() => setMobileOpen(false)}>
                 {t('contact')}
               </Button>
             </div>

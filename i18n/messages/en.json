@@ -73,7 +73,14 @@
       "submit": "Send message",
       "sending": "Sending…",
       "success": "Your message has been received. We will be in touch soon.",
-      "error": "We could not send your message. Please try again later or contact us directly."
+      "error": "We could not send your message. Please try again later or contact us directly.",
+      "errors": {
+        "nameRequired": "Please enter your name (at least 2 characters).",
+        "emailInvalid": "Please enter a valid email address.",
+        "phoneRequired": "Please enter your phone number.",
+        "subjectRequired": "Please enter a subject.",
+        "messageRequired": "Please enter a message of at least 10 characters."
+      }
     }
   },
   "lawyer": {

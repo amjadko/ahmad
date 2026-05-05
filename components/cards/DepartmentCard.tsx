@@ -18,7 +18,7 @@ export function DepartmentCard({
 
   return (
     <Link
-      href={`/lawyer/${lawyer.slug}?dept=${department.slug}`}
+      href={`/lawyer/${lawyer.slug}`}
       className="group flex h-full flex-col rounded-sm border border-ink-line bg-ink-elevated p-7 transition-all duration-300 hover:border-gold hover:bg-ink-elevated/70 focus-visible:border-gold"
     >
       <div className="flex items-start justify-between">

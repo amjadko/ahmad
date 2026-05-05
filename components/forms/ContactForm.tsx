@@ -69,19 +69,19 @@ export function ContactForm() {
       <div>
         <label className={labelCls}>{t('name')}<span className="text-gold">*</span></label>
         <input type="text" autoComplete="name" className={inputCls} {...register('name')} />
-        {errors.name && <p className={errCls}>{t('name')}</p>}
+        {errors.name && <p className={errCls}>{t('errors.nameRequired')}</p>}
       </div>
 
       <div>
         <label className={labelCls}>{t('email')}<span className="text-gold">*</span></label>
         <input type="email" autoComplete="email" dir="ltr" className={inputCls} {...register('email')} />
-        {errors.email && <p className={errCls}>{t('email')}</p>}
+        {errors.email && <p className={errCls}>{t('errors.emailInvalid')}</p>}
       </div>
 
       <div>
         <label className={labelCls}>{t('phone')}<span className="text-gold">*</span></label>
         <input type="tel" autoComplete="tel" dir="ltr" className={inputCls} {...register('phone')} />
-        {errors.phone && <p className={errCls}>{t('phone')}</p>}
+        {errors.phone && <p className={errCls}>{t('errors.phoneRequired')}</p>}
       </div>
 
       <div>
@@ -97,13 +97,13 @@ export function ContactForm() {
       <div>
         <label className={labelCls}>{t('subject')}<span className="text-gold">*</span></label>
         <input type="text" className={inputCls} {...register('subject')} />
-        {errors.subject && <p className={errCls}>{t('subject')}</p>}
+        {errors.subject && <p className={errCls}>{t('errors.subjectRequired')}</p>}
       </div>
 
       <div className="md:col-span-2">
         <label className={labelCls}>{t('message')}<span className="text-gold">*</span></label>
         <textarea rows={5} className={inputCls} {...register('message')} />
-        {errors.message && <p className={errCls}>{t('message')}</p>}
+        {errors.message && <p className={errCls}>{t('errors.messageRequired')}</p>}
       </div>
 
       <div className="md:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">

@@ -28,10 +28,10 @@ export function Footer() {
           <nav aria-label={tFooter('sitemap')}>
             <p className="eyebrow mb-5">{tFooter('sitemap')}</p>
             <ul className="space-y-3 text-sm text-cream-muted">
-              <li><a href="#about" className="hover:text-gold transition">{tNav('about')}</a></li>
-              <li><a href="#departments" className="hover:text-gold transition">{tNav('departments')}</a></li>
-              <li><a href="#clients" className="hover:text-gold transition">{tNav('clients')}</a></li>
-              <li><a href="#contact" className="hover:text-gold transition">{tNav('contact')}</a></li>
+              <li><a href={`/${locale}/#about`} className="hover:text-gold transition">{tNav('about')}</a></li>
+              <li><a href={`/${locale}/#departments`} className="hover:text-gold transition">{tNav('departments')}</a></li>
+              <li><a href={`/${locale}/#clients`} className="hover:text-gold transition">{tNav('clients')}</a></li>
+              <li><a href={`/${locale}/#contact`} className="hover:text-gold transition">{tNav('contact')}</a></li>
             </ul>
           </nav>
 

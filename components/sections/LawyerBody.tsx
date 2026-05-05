@@ -22,11 +22,14 @@ export function LawyerBody({ lawyer, locale }: { lawyer: Lawyer; locale: Locale 
   const departmentCountWord =
     ledDepartments.length > 1 ? t('headings.leadsPlural') : t('headings.leadsSingular');
 
+  const hasMatters = lawyer.notableMatters.length > 0;
+  const hasEducation = lawyer.education.length > 0;
+
   const sections = [
     { id: 'about', label: t('sections.about') },
     { id: 'departments', label: t('sections.departments') },
-    { id: 'matters', label: t('sections.matters') },
-    { id: 'education', label: t('sections.education') },
+    ...(hasMatters ? [{ id: 'matters', label: t('sections.matters') }] : []),
+    ...(hasEducation ? [{ id: 'education', label: t('sections.education') }] : []),
     { id: 'languages', label: t('sections.languages') }
   ];
 
@@ -77,6 +80,7 @@ export function LawyerBody({ lawyer, locale }: { lawyer: Lawyer; locale: Locale 
             </ul>
           </div>
 
+          {hasMatters && (
           <div id="matters">
             <Eyebrow>{t('sections.matters')}</Eyebrow>
             <Heading level={2} size="2xl" asArabic={isAr} className="mt-3">
@@ -92,7 +96,9 @@ export function LawyerBody({ lawyer, locale }: { lawyer: Lawyer; locale: Locale 
               ))}
             </ul>
           </div>
+          )}
 
+          {hasEducation && (
           <div id="education">
             <Eyebrow>{t('sections.education')}</Eyebrow>
             <Heading level={2} size="2xl" asArabic={isAr} className="mt-3">
@@ -105,6 +111,7 @@ export function LawyerBody({ lawyer, locale }: { lawyer: Lawyer; locale: Locale 
               ))}
             </ul>
           </div>
+          )}
 
           <div id="languages">
             <Eyebrow>{t('sections.languages')}</Eyebrow>

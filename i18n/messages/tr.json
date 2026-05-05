@@ -74,7 +74,14 @@
       "submit": "Mesaj gönder",
       "sending": "Gönderiliyor…",
       "success": "Mesajınız alındı. Kısa sürede dönüş yapacağız.",
-      "error": "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin veya bizimle doğrudan iletişime geçin."
+      "error": "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin veya bizimle doğrudan iletişime geçin.",
+      "errors": {
+        "nameRequired": "Lütfen adınızı girin (en az 2 karakter).",
+        "emailInvalid": "Lütfen geçerli bir e-posta adresi girin.",
+        "phoneRequired": "Lütfen telefon numaranızı girin.",
+        "subjectRequired": "Lütfen bir konu girin.",
+        "messageRequired": "Lütfen en az 10 karakterlik bir mesaj girin."
+      }
     }
   },
   "lawyer": {

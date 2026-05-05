@@ -74,7 +74,14 @@
       "submit": "Nachricht senden",
       "sending": "Wird gesendet…",
       "success": "Ihre Nachricht ist bei uns eingegangen. Wir melden uns in Kürze.",
-      "error": "Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt."
+      "error": "Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt.",
+      "errors": {
+        "nameRequired": "Bitte geben Sie Ihren Namen ein (mindestens 2 Zeichen).",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "phoneRequired": "Bitte geben Sie Ihre Telefonnummer ein.",
+        "subjectRequired": "Bitte geben Sie einen Betreff ein.",
+        "messageRequired": "Bitte geben Sie eine Nachricht mit mindestens 10 Zeichen ein."
+      }
     }
   },
   "lawyer": {
