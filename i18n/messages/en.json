@@ -24,5 +24,25 @@
     "rights": "All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms"
+  },
+  "home": {
+    "hero": {
+      "subhead": "Comprehensive legal and financial solutions for local and international companies, led by founding attorney Ahmad Alkourabi.",
+      "ctaServices": "Our services",
+      "ctaContact": "Get in touch",
+      "imageAlt": "Lady Justice"
+    },
+    "identity": {
+      "founded": "Founded",
+      "departments": "Specialized departments",
+      "internationalClients": "International clients",
+      "countriesServed": "Countries served"
+    },
+    "about": {
+      "eyebrow": "About us",
+      "heading": "Comprehensive legal expertise in the heart of Damascus",
+      "p1": "Since its establishment in 2018, Alkourabi Law Firm has positioned itself as a leading and trusted legal partner in Syria. We provide comprehensive legal and financial solutions to local and international companies, with a focus on safeguarding clients' interests and ensuring full compliance with the complex Syrian legal framework through our specialized departments.",
+      "p2": "We serve a distinguished portfolio of international and regional agencies and companies from Germany, Türkiye, and Jordan — alongside our clients in the Syrian market."
+    }
   }
 }

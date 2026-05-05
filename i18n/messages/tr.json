@@ -25,5 +25,25 @@
     "rights": "Tüm hakları saklıdır.",
     "privacy": "Gizlilik",
     "terms": "Kullanım koşulları"
+  },
+  "home": {
+    "hero": {
+      "subhead": "Yerli ve uluslararası şirketlere yönelik kapsamlı hukuki ve mali çözümler — kurucu avukat Ahmad Alkourabi'nin liderliğinde.",
+      "ctaServices": "Hizmetlerimiz",
+      "ctaContact": "İletişime geçin",
+      "imageAlt": "Adalet Tanrıçası"
+    },
+    "identity": {
+      "founded": "Kuruluş",
+      "departments": "Uzmanlık bölümü",
+      "internationalClients": "Uluslararası müvekkil",
+      "countriesServed": "Hizmet verilen ülke"
+    },
+    "about": {
+      "eyebrow": "Hakkımızda",
+      "heading": "Şam'ın kalbinde kapsamlı hukuki uzmanlık",
+      "p1": "2018'de kuruluşundan bu yana Alkourabi Hukuk Bürosu, Suriye'de önde gelen ve güvenilir bir hukuki ortak olarak konumlanmıştır. Yerli ve uluslararası şirketlere kapsamlı hukuki ve mali çözümler sunuyoruz — müvekkillerimizin çıkarlarını koruma ve uzmanlık bölümlerimiz aracılığıyla karmaşık Suriye hukuk çerçevesine tam uyumun sağlanması odaklı.",
+      "p2": "Almanya, Türkiye ve Ürdün'den önde gelen uluslararası ve bölgesel ajans ve şirketlerden oluşan seçkin bir portföye hizmet veriyoruz — Suriye pazarındaki müvekkillerimizin yanı sıra."
+    }
   }
 }

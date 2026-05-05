@@ -25,5 +25,25 @@
     "rights": "Alle Rechte vorbehalten.",
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen"
+  },
+  "home": {
+    "hero": {
+      "subhead": "Umfassende rechtliche und finanzielle Lösungen für nationale und internationale Unternehmen — unter der Leitung von Gründungsanwalt Ahmad Alkourabi.",
+      "ctaServices": "Unsere Bereiche",
+      "ctaContact": "Kontakt aufnehmen",
+      "imageAlt": "Justitia"
+    },
+    "identity": {
+      "founded": "Gegründet",
+      "departments": "Fachbereiche",
+      "internationalClients": "Internationale Mandanten",
+      "countriesServed": "Bediente Länder"
+    },
+    "about": {
+      "eyebrow": "Über uns",
+      "heading": "Umfassende juristische Kompetenz im Herzen von Damaskus",
+      "p1": "Seit ihrer Gründung im Jahr 2018 hat sich die Alkourabi Anwaltskanzlei als führender und vertrauenswürdiger Rechtspartner in Syrien etabliert. Wir bieten nationalen und internationalen Unternehmen umfassende rechtliche und finanzielle Lösungen — mit Fokus auf den Schutz der Mandanteninteressen und die vollständige Einhaltung des komplexen syrischen Rechtsrahmens durch unsere spezialisierten Fachbereiche.",
+      "p2": "Wir betreuen ein renommiertes Portfolio internationaler und regionaler Agenturen und Unternehmen aus Deutschland, der Türkei und Jordanien — sowie unsere Mandanten auf dem syrischen Markt."
+    }
   }
 }
