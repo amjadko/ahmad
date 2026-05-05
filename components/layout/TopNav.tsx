@@ -24,6 +24,7 @@ export function TopNav() {
   const links = [
     { href: `/${locale}/#about`, label: t('about') },
     { href: `/${locale}/#departments`, label: t('departments') },
+    { href: `/${locale}/#clients`, label: t('clients') },
     { href: `/${locale}/#contact`, label: t('contact') }
   ];
 

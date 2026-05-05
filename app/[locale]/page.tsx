@@ -8,6 +8,7 @@ import { IdentityStrip } from '@/components/sections/IdentityStrip';
 import { About } from '@/components/sections/About';
 import { FounderSpotlight } from '@/components/sections/FounderSpotlight';
 import { Departments } from '@/components/sections/Departments';
+import { Clients } from '@/components/sections/Clients';
 import { Contact } from '@/components/sections/Contact';
 
 export default async function HomePage({
@@ -27,6 +28,7 @@ export default async function HomePage({
         <About />
         <FounderSpotlight />
         <Departments />
+        <Clients />
         <Contact />
       </main>
       <Footer />
